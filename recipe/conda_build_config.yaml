@@ -1,0 +1,5 @@
+c_compiler_version:
+  - 8  # [linux and not aarch64]
+cxx_compiler_version:
+  - 8  # [linux and not aarch64]
+

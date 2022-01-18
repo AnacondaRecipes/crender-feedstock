@@ -1,0 +1,38 @@
+{% set version = "2022.01.18" %}
+
+package:
+  name: crender
+  version: {{ version }}
+
+source:
+  git_url: https://github.com/ScottBailey/crender.git
+  git_rev: efb94ef40d89ade218869f543aa27f38af35b23b
+
+build:
+  number: 0
+  skip: True  [win]
+
+requirements:
+  build:
+    - {{ compiler('c') }}
+    - {{ compiler('cxx') }}
+    - cmake
+    - git
+  host:
+    - boost
+
+test:
+  commands:
+    - crender --help
+
+about:
+  home: https://github.com/anaconda-distribution/crender
+  license: MIT
+  license_family: MIT
+  license_file: LICENSE
+  summary: 'The crender tool for creating and checking conda recipes'
+  dev_url: https://github.com/anaconda-distribution/crender
+
+extra:
+  recipe-maintainers:
+    - tkoch
