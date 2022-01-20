@@ -22,10 +22,6 @@ requirements:
   host:
     - boost
 
-test:
-  commands:
-    - crender --help
-
 about:
   home: https://github.com/anaconda-distribution/crender
   license: MIT
