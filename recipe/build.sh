@@ -6,7 +6,8 @@ git submodule update --init
 sed -i '/-Werror/d' CMakeLists.txt
 sed -i 's@jinja2cpp.pc.in jinja2cpp.pc@jinja2cpp.pc.in ${CMAKE_BINARY_DIR}/jinja2cpp.pc@g' Jinja2Cpp/CMakeLists.txt
 
-mkdir .build && cd .build
+mkdir -p .build
+cd .build || exit -1
 
 if [[ ${DEBUG_C} == yes ]]; then
   CMAKE_BUILD_TYPE=Debug
@@ -20,5 +21,4 @@ cmake -G"Ninja" ${CMAKE_ARGS} \
     -DCMAKE_INSTALL_LIBDIR="lib" \
     ..
 
-ninja
-install -m 0755 crender ${PREFIX}/bin/crender
+ninja install
