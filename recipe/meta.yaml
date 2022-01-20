@@ -5,8 +5,8 @@ package:
   version: {{ version }}
 
 source:
-  git_url: https://github.com/ScottBailey/crender.git
-  git_rev: efb94ef40d89ade218869f543aa27f38af35b23b
+  git_url: https://github.com/anaconda-distribution/crender.git
+  git_rev: 3683168e22133d34d2d89ba7db895fa743f6b3c8
 
 build:
   number: 0
