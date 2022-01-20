@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: https://github.com/anaconda-distribution/crender.git
-  git_rev: 7bfb82c65fad2e8121d95c5cca3d2b4d3dd3cc30
+  git_rev: anaconda-recipe
 
 build:
   number: 0
