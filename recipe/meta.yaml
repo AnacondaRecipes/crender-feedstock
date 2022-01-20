@@ -6,7 +6,7 @@ package:
 
 source:
   git_url: https://github.com/anaconda-distribution/crender.git
-  git_rev: 3683168e22133d34d2d89ba7db895fa743f6b3c8
+  git_rev: 58c744d623dbf0566162ca1776a6d55833fb8676
 
 build:
   number: 0
