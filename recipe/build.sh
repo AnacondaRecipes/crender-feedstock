@@ -1,7 +1,6 @@
 #!/bin/bash -e
 
-git submodule init
-git submodule update
+git submodule update --init
 
 # Dirty fixes.
 sed -i '/-Werror/d' CMakeLists.txt
@@ -15,11 +14,11 @@ else
   CMAKE_BUILD_TYPE=Release
 fi
 
-cmake ${CMAKE_ARGS} \
+cmake -G"Ninja" ${CMAKE_ARGS} \
     -DCMAKE_INSTALL_PREFIX=${PREFIX} \
     -DCMAKE_BUILD_TYPE="${CMAKE_BUILD_TYPE}" \
     -DCMAKE_INSTALL_LIBDIR="lib" \
     ..
 
-make -j${CPU_COUNT} ${VERBOSE_CM}
-make install crender
+ninja
+ninja install
