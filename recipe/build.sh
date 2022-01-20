@@ -21,4 +21,4 @@ cmake -G"Ninja" ${CMAKE_ARGS} \
     ..
 
 ninja
-install -m 0755 ${PREFIX}/bin/crender
+install -m 0755 crender ${PREFIX}/bin/crender
