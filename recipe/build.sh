@@ -2,8 +2,7 @@
 
 git submodule update --init
 
-# Dirty fixes.
-sed -i '/-Werror/d' CMakeLists.txt
+# Dirty fix
 #sed -i 's@jinja2cpp.pc.in jinja2cpp.pc@jinja2cpp.pc.in ${CMAKE_BINARY_DIR}/jinja2cpp.pc@g' Jinja2Cpp/CMakeLists.txt
 
 mkdir -p .build
