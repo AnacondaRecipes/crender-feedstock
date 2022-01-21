@@ -7,6 +7,8 @@ package:
 source:
   git_url: https://github.com/anaconda-distribution/crender.git
   git_rev: anaconda-recipe
+  patches:           # [linux and ppc64le]
+    - gcc8-fs.patch  # [linux and ppc64le]
 
 build:
   number: 0

@@ -1,0 +1,13 @@
+diff --git a/CMakeLists.txt b/CMakeLists.txt
+index e7787d4..8a5148d 100644
+--- a/CMakeLists.txt
++++ b/CMakeLists.txt
+@@ -41,7 +41,7 @@ target_include_directories(${target_name} SYSTEM PRIVATE
+ if( WIN32 )
+     set(extra_libs "")
+ else()
+-    set(extra_libs pthread)
++    set(extra_libs pthread stdc++fs)
+ endif()
+ 
+ target_link_libraries(${target_name} PRIVATE # maybe this should be public?
