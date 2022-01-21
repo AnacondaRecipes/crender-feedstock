@@ -10,7 +10,7 @@ source:
   patches:
     # Remove werror from the gcc/llvm compiler options.
     - patches/no-werror.patch
-    # gcc8: link with -lstdc++fs to overcome std::filesystem issue.
+    # gcc8: link with -lstdc++fs to overcome std::filesystem issue. For more info, see: https://gitlab.kitware.com/cmake/cmake/-/issues/17834
     - patches/gcc8-fs.patch  # [linux and ppc64le]
 
 build:
