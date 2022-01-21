@@ -1,8 +1,8 @@
 #!/bin/bash -e
 
-git submodule update --init
 
 # Dirty fix
+#git submodule update --init Jinja2Cpp
 #sed -i 's@jinja2cpp.pc.in jinja2cpp.pc@jinja2cpp.pc.in ${CMAKE_BINARY_DIR}/jinja2cpp.pc@g' Jinja2Cpp/CMakeLists.txt
 
 mkdir -p .build
