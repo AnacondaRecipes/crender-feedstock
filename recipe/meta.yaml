@@ -1,4 +1,4 @@
-{% set version = "2022.01.18" %}
+{% set version = "0.3" %}
 
 package:
   name: crender
@@ -6,22 +6,20 @@ package:
 
 source:
   git_url: https://github.com/anaconda-distribution/crender.git
-  git_rev: anaconda-recipe
+  git_rev: 9688dd815a043173eb2591fe1f3b426aa3fe4603
   patches:
-    # Remove werror from the gcc/llvm compiler options.
-    - patches/no-werror.patch
     # gcc8: link with -lstdc++fs to overcome std::filesystem issue. For more info, see: https://gitlab.kitware.com/cmake/cmake/-/issues/17834
     - patches/gcc8-fs.patch  # [linux and ppc64le]
 
 build:
   number: 0
-  skip: True  [win]
 
 requirements:
   build:
     - {{ compiler('c') }}
     - {{ compiler('cxx') }}
     - cmake
+    - patch  # [linux and ppc64le]
     - git
     - ninja
   host:
@@ -30,7 +28,6 @@ requirements:
 about:
   home: https://github.com/anaconda-distribution/crender
   license: MIT
-  license_family: MIT
   license_file: LICENSE
   summary: 'The crender tool for creating and checking conda recipes'
   dev_url: https://github.com/anaconda-distribution/crender
@@ -38,3 +35,4 @@ about:
 extra:
   recipe-maintainers:
     - tkoch
+    - sbailey
