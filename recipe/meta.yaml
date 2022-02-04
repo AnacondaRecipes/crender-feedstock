@@ -22,8 +22,6 @@ requirements:
     - patch  # [linux and ppc64le]
     - git
     - ninja
-  host:
-    - boost
 
 about:
   home: https://github.com/anaconda-distribution/crender
