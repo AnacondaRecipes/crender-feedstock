@@ -1,4 +1,4 @@
-{% set version = "0.3" %}
+{% set version = "0.4" %}
 
 package:
   name: crender
@@ -6,13 +6,13 @@ package:
 
 source:
   git_url: https://github.com/anaconda-distribution/crender.git
-  git_rev: 9688dd815a043173eb2591fe1f3b426aa3fe4603
+  git_rev: 7c89021efbcdb82f843c8cd068d3768dfe68e2af
   patches:
     # gcc8: link with -lstdc++fs to overcome std::filesystem issue. For more info, see: https://gitlab.kitware.com/cmake/cmake/-/issues/17834
     - patches/gcc8-fs.patch  # [linux and ppc64le]
 
 build:
-  number: 1
+  number: 0
 
 requirements:
   build:
@@ -27,8 +27,10 @@ about:
   home: https://github.com/anaconda-distribution/crender
   license: MIT
   license_file: LICENSE
+  license_family: MIT
   summary: 'The crender tool for creating and checking conda recipes'
   dev_url: https://github.com/anaconda-distribution/crender
+  doc_url: https://github.com/anaconda-distribution/crender
 
 extra:
   recipe-maintainers:
