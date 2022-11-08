@@ -1,8 +1,10 @@
 # gcc8's support for C++17 is still considered experimental, use a
 # newer version where available.
-c_compiler_version:    # [linux and not aarch64]
+c_compiler_version:    # [linux]
 - '9'                  # [linux and not aarch64 and not ppc64le]
 - '8'                  # [linux and ppc64le]
-cxx_compiler_version:  # [linux and not aarch64]
+- '10.2.0'             # [linux and aarch64]
+cxx_compiler_version:  # [linux]
 - '9'                  # [linux and not aarch64 and not ppc64le]
 - '8'                  # [linux and ppc64le]
+- '10.2.0'             # [linux and aarch64]
